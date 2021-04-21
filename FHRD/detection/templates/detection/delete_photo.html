@@ -1,0 +1,10 @@
+{% extends 'detection/base.html' %}
+{% load static %}
+{% block content %}
+<p>Are you sure you want to delete {{image.title}}?</p>
+<form action="" method="POST">
+    {% csrf_token %}
+    <a id="lb" href="{% url 'face' %}">Cancel</a>
+    <input type="submit" name="Confirm">
+</form>
+{% endblock %}

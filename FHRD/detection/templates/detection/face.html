@@ -1,0 +1,29 @@
+{% extends 'detection/base.html' %}
+{% block content %}
+<div class="buttons">
+    <a id='cat' href="{% url 'upload' %}">File upload</a>
+    <a id='cat' href="{% url 'video' %}">Webcam</a>
+</div>
+<div class="tables">
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        {% for i in photos %}
+        <tr>
+            <td>{{i.title}}</td>
+            <td><a class="btn btn-primary" href="{% url 'view_photo' i.id %}">View</a></td>
+            <td><a class="btn btn-warning" href="{% url 'detect_faces' i.id %}">Detect</a></td>
+            <td><a class="btn btn-danger" href="{% url 'delete_photo' i.id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<div class="buttons">
+    <a id='cat' href="{% url 'home' %}">Home</a>
+</div>
+<h1></h1>
+{% endblock content %}

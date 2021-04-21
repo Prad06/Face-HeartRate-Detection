@@ -1,0 +1,13 @@
+{% extends 'detection/base.html' %}
+{% block content %}
+<div class="back" id="greet">
+    <a id="lb" href="{% url 'face' %}">&larr;</a>
+</div>
+<div id="greet">
+    {{image.title}}
+</div>
+<p></p>
+<div class="imgbox">
+    <img class="center-fit" src="{{image.img.url}}">
+</div>
+{% endblock %}

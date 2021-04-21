@@ -1,0 +1,12 @@
+{% extends 'detection/base.html' %}
+{% block content %}
+<div class="back" id="greet">
+    <a id="lb" href="{% url 'face' %}">&larr;</a>
+</div>
+<div id="greet">Upload</div>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" name="Submit">
+</form>
+{% endblock content %}

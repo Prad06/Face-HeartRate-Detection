@@ -1,0 +1,16 @@
+{% extends 'detection/base.html' %}
+{% load static %}
+{% block content %}
+<div class="back" id="greet">
+    <a id="lb" href="{% url 'face' %}">&larr;</a>
+</div>
+<div id="greet">
+    {{image.title}}
+</div>
+<p></p>
+<div>
+    <div class="imgbox">
+        <img class="center-fit" src="{% static 'images/detected_images/image.jpeg' %}">
+    </div>
+</div>
+{% endblock %}

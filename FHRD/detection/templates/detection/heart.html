@@ -1,0 +1,22 @@
+{% extends 'detection/base.html' %}
+{% load static %}
+{% block content %}
+<div class="back" id="greet">
+    <a id="lb" href="{% url 'home' %}">&larr;</a>
+</div>
+<div id="greet">Instructions</div>
+<p></p>
+<ol class="instructions">
+    <li>Use torch to make light available for your webcam.</li>
+    <li>Before hitting the start button ensure that your camera has a feed like these photos.</li>
+    <li>Don't remove/move your fingertip or change the direction of torch light once it starts calculating. This will
+        lead to wrong results.</li>
+    <li>After hitting start wait for 20 seconds to get the heart rate.</li>
+</ol>
+<img src="{% static 'images/detected_images/HeartRate1.jpg' %}" height="100" width="100">
+<img src="{% static 'images/detected_images/HeartRate2.jpg' %}" height="100" width="100">
+<p></p>
+<div class="start">
+    <a id='cat' href="{% url 'heart_calc' %}">Start</a>
+</div>
+{% endblock %}

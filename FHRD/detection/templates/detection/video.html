@@ -1,0 +1,11 @@
+{% extends 'detection/base.html' %}
+{% block content %}
+<div class="back" id="greet">
+    <a id="lb" href="{% url 'face' %}">&larr;</a>
+</div>
+<div id="greet">
+    Hey, wait it generally takes a few seconds!
+</div>
+<p></p>
+<img src="{% url 'video_feed' %}">
+{% endblock content %}
